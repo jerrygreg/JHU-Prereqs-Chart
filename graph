@@ -1,0 +1,76 @@
+digraph {
+	node [shape=box]
+	edge [dir=back]
+	EN520445_ [label="Audio Signal Processing"]
+	EN520344_EN520445 [label="Introduction to Digital Signal Processing"]
+	EN520214_EN520344 [label="Signals & Systems"]
+	EN580242_EN520344 [label="Biological Models and Simulations"]
+	EN580246_EN520344 [label="Systems and Controls"]
+	AS110107_EN520214 [label="Calculus II (For Biology and Social Science)"]
+	AS110107_AS110202 [label="Calculus II (For Biology and Social Science)"]
+	AS110107_AS110201 [label="Calculus II (For Biology and Social Science)"]
+	AS110107_AS110302 [label="Calculus II (For Biology and Social Science)"]
+	AS110109_EN520214 [label="Calculus II (Physical Sciences & Engineering)"]
+	AS110109_AS110202 [label="Calculus II (Physical Sciences & Engineering)"]
+	AS110109_AS110201 [label="Calculus II (Physical Sciences & Engineering)"]
+	AS110109_AS110302 [label="Calculus II (Physical Sciences & Engineering)"]
+	AS110202_EN520214 [label="Calculus III"]
+	AS110202_AS110201 [label="Calculus III"]
+	AS110202_AS110302 [label="Calculus III"]
+	AS110211_EN520214 [label="Honors Multivariable Calculus"]
+	AS110211_AS110302 [label="Honors Multivariable Calculus"]
+	EN580243_EN580246 [label="Linear Signals and Systems"]
+	AS110113_AS110202 [label="Honors Single Variable Calculus"]
+	AS110113_AS110201 [label="Honors Single Variable Calculus"]
+	AS110113_AS110302 [label="Honors Single Variable Calculus"]
+	AS110201_AS110202 [label="Linear Algebra"]
+	AS110201_AS110211 [label="Linear Algebra"]
+	AS110201_AS110302 [label="Linear Algebra"]
+	AS110212_AS110202 [label="Honors Linear Algebra"]
+	AS110212_AS110211 [label="Honors Linear Algebra"]
+	AS110212_AS110302 [label="Honors Linear Algebra"]
+	AS110302_AS110202 [label="Differential Equations with Applications"]
+	AS110302_AS110201 [label="Differential Equations with Applications"]
+	EN520445_ -> EN520344_EN520445
+	EN520344_EN520445 -> EN520214_EN520344
+	EN520214_EN520344 -> EN580242_EN520344 [label=OR arrowtail=none]
+	EN580242_EN520344 -> EN580246_EN520344 [label=OR arrowtail=none]
+{rank = same;EN520214_EN520344;EN580242_EN520344;EN580246_EN520344}
+	EN520214_EN520344 -> AS110107_EN520214
+	AS110107_EN520214 -> AS110109_EN520214 [label=OR arrowtail=none]
+{rank = same;AS110107_EN520214;AS110109_EN520214}
+	EN520214_EN520344 -> AS110202_EN520214
+	AS110202_EN520214 -> AS110211_EN520214 [label=OR arrowtail=none]
+{rank = same;AS110202_EN520214;AS110211_EN520214}
+	EN580246_EN520344 -> EN580243_EN580246
+	AS110202_EN520214 -> AS110107_AS110202
+	AS110107_AS110202 -> AS110109_AS110202 [label=OR arrowtail=none]
+	AS110109_AS110202 -> AS110113_AS110202 [label=OR arrowtail=none]
+	AS110113_AS110202 -> AS110201_AS110202 [label=OR arrowtail=none]
+	AS110201_AS110202 -> AS110212_AS110202 [label=OR arrowtail=none]
+	AS110212_AS110202 -> AS110302_AS110202 [label=OR arrowtail=none]
+{rank = same;AS110107_AS110202;AS110109_AS110202;AS110113_AS110202;AS110201_AS110202;AS110212_AS110202;AS110302_AS110202}
+	AS110211_EN520214 -> AS110201_AS110211
+	AS110201_AS110211 -> AS110212_AS110211 [label=OR arrowtail=none]
+{rank = same;AS110201_AS110211;AS110212_AS110211}
+	AS110201_AS110202 -> AS110107_AS110201
+	AS110107_AS110201 -> AS110109_AS110201 [label=OR arrowtail=none]
+	AS110109_AS110201 -> AS110113_AS110201 [label=OR arrowtail=none]
+	AS110113_AS110201 -> AS110202_AS110201 [label=OR arrowtail=none]
+	AS110202_AS110201 -> AS110302_AS110201 [label=OR arrowtail=none]
+{rank = same;AS110107_AS110201;AS110109_AS110201;AS110113_AS110201;AS110202_AS110201;AS110302_AS110201}
+	AS110302_AS110202 -> AS110107_AS110302
+	AS110107_AS110302 -> AS110109_AS110302 [label=OR arrowtail=none]
+	AS110109_AS110302 -> AS110113_AS110302 [label=OR arrowtail=none]
+	AS110113_AS110302 -> AS110201_AS110302 [label=OR arrowtail=none]
+	AS110201_AS110302 -> AS110202_AS110302 [label=OR arrowtail=none]
+	AS110202_AS110302 -> AS110211_AS110302 [label=OR arrowtail=none]
+	AS110211_AS110302 -> AS110212_AS110302 [label=OR arrowtail=none]
+{rank = same;AS110107_AS110302;AS110109_AS110302;AS110113_AS110302;AS110201_AS110302;AS110202_AS110302;AS110211_AS110302;AS110212_AS110302}
+{rank = same;AS110107_AS110201}
+{rank = same;AS110107_AS110202}
+{rank = same;AS110107_AS110302}
+{rank = same;AS110107_AS110201}
+{rank = same;AS110107_AS110202}
+{rank = same;AS110201_AS110211}
+}
