@@ -410,6 +410,7 @@ class Course: #Contains all the functions needed :)
     def create(coursecode,parent):
         """
         A Return function!
+        
         requests and returns the course as an object with basic data loaded in from the SIS api
         Basic data being the data given without section data
         Also, adds the course into the parent(s)'s prereqs
